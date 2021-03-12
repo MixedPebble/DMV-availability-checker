@@ -60,7 +60,8 @@ while True:
     checkForEarlierDate(peekskillResponse, benchmarkDate, "peekskill")
     checkForEarlierDate(whitePlainsDates, benchmarkDate, "whiteplanes")
     checkForEarlierDate(yonkersDates, benchmarkDate, "Yonkers")
-    time.sleep(os.getEnv("SLEEP_TIME"))
+    sleepTime = int(os.getenv("SLEEP_TIME"))
+    time.sleep(sleepTime)
 
 
 
