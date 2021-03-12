@@ -44,6 +44,7 @@ def sendNotification(message):
     server.quit()
 
 while True:
+    print(datetime.now())
     # Request Data
     peekskillResponse = requests.request("GET", peekskillUrl, headers={}, data={})
     whitePlainsResponse = requests.request("GET", whitePlainsUrl, headers={}, data={})
@@ -62,7 +63,6 @@ while True:
     checkForEarlierDate(yonkersDates, benchmarkDate, "Yonkers")
     sleepTime = int(os.getenv("SLEEP_TIME"))
     time.sleep(sleepTime)
-
 
 
 
